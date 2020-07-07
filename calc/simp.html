@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+ <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+ -->
+ <style>
+     #mydiv {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width:30em;
+    height:18em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+}
+img{
+  padding-right: 20px;
+  padding-top: 20px;
+ height: 80px;
+ float: right;
+  width: 80px;
+  
+}
+     </style>
+</head>
+<body>
+    
+        <div class="container">
+        
+          <figure class="figure">
+                <img  id="zooming" src="image/plus.png" class="figure-img img-fluid rounded" alt="addition">
+                <figcaption class="figure-caption"> Addition</figcaption>
+              </figure>
+
+              <figure class="figure">
+                <img src="image/subtract.png" class="figure-img img-fluid rounded" alt="subtraction">
+                <figcaption class="figure-caption">Subtraction </figcaption>
+              </figure>
+
+              <figure class="figure">
+                <img src="image/modulo.jpg" class="figure-img img-fluid rounded" alt=" Modulo">
+                <figcaption class="figure-caption">Modulo </figcaption>
+              </figure>
+
+              <figure class="figure">
+                <img src="image/div1.png" class="figure-img img-fluid rounded" alt="Division">
+                <figcaption class="figure-caption">Division</figcaption>
+              </figure>
+
+              <figure class="figure">
+                <img src="image/mul.png" class="figure-img img-fluid rounded" alt="Multiplication">
+                <figcaption class="figure-caption">Multiplication</figcaption>
+              </figure>
+
+              
+          <h2 style="float: right; padding-right: 100px; padding-top: 30px; color: blue; text-transform: capitalize;">A Simple Calculator</h2>
+              
+      
+
+        <div class="card text-center" style="width: 18rem;" id="mydiv">
+            <div class="card-header">
+                 CAL_C
+              </div>
+              <div class="card-body">
+            <form name="example">
+        <div class="form-group row">
+          <label for="value1" name="value1">Enter the Expression</label><br>
+        <input type="text" size="20" name="calculator" placeholder="Eg: 4+3">
+        <input type="button" class="btn btn-success btn-xs" name="b1" value="calculate" onclick="cal()"><br><br>
+        </div>
+
+        <div class="form-group row"></div>
+        <input type="text" size="20" name="answer" placeholder="Result" ><br><br>
+        </div>
+
+    
+        <input type="reset" class="btn btn-warning" name="b2" value="reset">
+    </form>
+        </div>
+    <div class="card-footer text-muted">
+        
+      </div>
+    </div>
+    
+</body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script>
+    function cal(){
+        document.example.answer.value =eval(document.example.calculator.value)
+    }
+
+</script>
+</html>
